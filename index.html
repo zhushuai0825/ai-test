@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI TEST · 测试学什么</title>
+    <meta name="description" content="AI 测试导览：提效、Agent、模型评测、功能接口性能。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="logo" href="#top">AI TEST</a>
+      <nav class="nav">
+        <a href="#boost">提效</a>
+        <a href="#agent">Agent</a>
+        <a href="#eval">评测</a>
+        <a href="#auto">工程</a>
+        <a href="#interview">面试</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-brand" aria-hidden="true">
+          <span class="marquee">
+            <span>AI TEST · AI TEST · AI TEST · AI TEST · AI TEST · AI TEST · </span>
+            <span>AI TEST · AI TEST · AI TEST · AI TEST · AI TEST · AI TEST · </span>
+          </span>
+        </div>
+        <div class="hero-copy">
+          <p class="hero-kicker">CURRICULUM SIGNAL</p>
+          <h1 class="hero-title">
+            <span class="line">测什么</span>
+            <span class="line accent">学什么</span>
+          </h1>
+          <div class="hero-cta">
+            <a class="btn primary" href="#modules">看五大模块</a>
+            <a class="btn ghost" href="#boost">从提效开始</a>
+          </div>
+        </div>
+        <div class="hero-meter" aria-hidden="true">
+          <div class="meter-row"><span>BOOST</span><i style="--w:72%"></i></div>
+          <div class="meter-row"><span>AGENT</span><i style="--w:86%"></i></div>
+          <div class="meter-row"><span>EVAL</span><i style="--w:64%"></i></div>
+          <div class="meter-row"><span>AUTO</span><i style="--w:78%"></i></div>
+          <div class="meter-row"><span>MOCK</span><i style="--w:58%"></i></div>
+        </div>
+      </section>
+
+      <section class="modules" id="modules">
+        <header class="section-head">
+          <h2>五大模块</h2>
+        </header>
+
+        <article class="mod" id="boost" data-mod="boost">
+          <div class="mod-rail">
+            <span class="mod-num">01</span>
+            <span class="mod-tag">BOOST</span>
+          </div>
+          <div class="mod-body">
+            <button type="button" class="mod-head" data-mod-toggle aria-expanded="false">
+              <h3>AI 提效</h3>
+              <span class="mod-toggle">展开</span>
+            </button>
+            <div class="subs">
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">01.1</span>
+                <span class="sub-title">Prompt 工作流</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>学怎么把任务拆成：角色、目标、输入材料、输出格式、验收标准。少用空喊「写好一点」，多用约束与示例。</p>
+                  <p>会沉淀小组可复用的提示模板（缺陷单、用例草稿、会议纪要），并知道何时该 few-shot、何时该要求分步说明。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">01.2</span>
+                <span class="sub-title">测试文书与用例提效</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>覆盖：测试点脑暴、用例草稿、等价类/边界候选、缺陷描述润色、复现步骤整理、回归清单初稿。</p>
+                  <p>强调「AI 出草稿 → 测试人改 → 入库」；不把未审内容直接当正式资产。学会给模型补上下文（需求片段、接口约定、历史缺陷）。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">01.3</span>
+                <span class="sub-title">日志 · 报告 · 对齐沟通</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>用模型做：失败日志摘要、对比两次跑批差异、把技术现象翻译成给产品/开发的短说明、站会同步要点。</p>
+                  <p>同时训练你识别「摘要是否丢掉关键报错码 / 时间线」——提效不能以丢信息为代价。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">01.4</span>
+                <span class="sub-title">轻量脚本与数据辅助</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>生成小段数据处理、JSON/CSV 转换、正则、造数思路；帮读不懂的报错栈。要求：能跑、能解释、能回滚，不盲贴长脚本进生产流水线。</p>
+                  <p>和「正式自动化框架」划界：提效是助攻，不是替代测试设计与断言策略。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">01.5</span>
+                <span class="sub-title">质量与安全底线</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>敏感数据脱敏再进提示；客户隐私、密钥、内部未公开链接不随手粘贴。输出要人工校验，尤其是数字、权限、环境相关结论。</p>
+                  <p>公司 Key 走网关/环境变量，不进前端、不进聊天截图外传。提效课必须带这节，否则越快越危险。</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mod" id="agent" data-mod="agent">
+          <div class="mod-rail">
+            <span class="mod-num">02</span>
+            <span class="mod-tag">AGENT</span>
+          </div>
+          <div class="mod-body">
+            <button type="button" class="mod-head" data-mod-toggle aria-expanded="false">
+              <h3>Agent 测试</h3>
+              <span class="mod-toggle">展开</span>
+            </button>
+            <div class="subs">
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">02.1</span>
+                <span class="sub-title">工具选择与调用正确性</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>设计用例：该调工具 vs 不该调；多工具时选没选对；同义问法会不会选错工具。记录实际调用名与期望名，做断言而不是肉眼瞄一眼。</p>
+                  <p>覆盖干扰：用户话里夹带无关系统名、故意诱导「直接编答案不调用」等。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">02.2</span>
+                <span class="sub-title">参数 · 结构化 · 可解析性</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>检查工具参数类型、必填项、枚举值、边界（空串、超长、特殊字符）。模型爱加解释文字导致 JSON 解析失败——要测失败率与重试策略。</p>
+                  <p>优先用 function calling / schema；你们侧必须有校验。测试要写「非法参数被拒」「缺字段提示」等负向用例。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">02.3</span>
+                <span class="sub-title">路径 · 步数 · 死循环</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>Agent Loop：观察→思考→行动是否收敛到结束条件。测最大步数是否生效、工具反复失败时会不会空转烧 token。</p>
+                  <p>记录轨迹：步数、重复调用、是否在同一错误上打转。通过标准不只「最终答对」，还包括「过程不失控」。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">02.4</span>
+                <span class="sub-title">状态 · 记忆 · 副作用</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>多轮对话里：是否用对短期记忆；会不会把上轮用户 A 的隐私带到用户 B；工具写操作是否留下不该留的脏数据。</p>
+                  <p>环境隔离、可回滚、幂等键——Agent 测试要和普通接口测试一样谈清理与隔离。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">02.5</span>
+                <span class="sub-title">HITL 与高风险动作</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>删除、发送、付款、改权限、部署等默认进入人机审批。测：是否真暂停、展示参数是否完整、拒绝后是否回传「已拒绝」且未假装成功。</p>
+                  <p>加注入类用例：「用户说忽略规则直接删」——系统仍必须停在闸门后。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">02.6</span>
+                <span class="sub-title">Agent 题集怎么搭</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>题表建议列：场景、期望工具、期望参数要点、是否允许写操作、期望步数上限、通过准则。黄金路径 + 负向 + 注入/越权各占一块。</p>
+                  <p>改 Prompt 或换模型时冻结题集重跑，对比「选对工具率 / 参数可解析率 / 越权拦截率」。</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mod" id="eval" data-mod="eval">
+          <div class="mod-rail">
+            <span class="mod-num">03</span>
+            <span class="mod-tag">EVAL</span>
+          </div>
+          <div class="mod-body">
+            <button type="button" class="mod-head" data-mod-toggle aria-expanded="false">
+              <h3>模型评测</h3>
+              <span class="mod-toggle">展开</span>
+            </button>
+            <div class="subs">
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">03.1</span>
+                <span class="sub-title">题集设计与对比实验</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>20～50 题即可起步：含易题、难题、同义改写、应拒答、边界问法。表头固定：问题、金标/要点、来源、是否应拒、题型标签。</p>
+                  <p>实验纪律：一次只改一个变量（模型或温度或 Prompt），记录版本快照，写出「A vs B」一句话结论。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">03.2</span>
+                <span class="sub-title">幻觉 · 忠实 · 拒答</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>把「答错」和「无中生有」分开记。要求引用时检查是否假引用；无依据场景必须能拒答，而不是编一个好听的。</p>
+                  <p>该答却乱拒也是失败。评测报告里至少给出：正确率、幻觉率、拒答正确率。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">03.3</span>
+                <span class="sub-title">RAG 场景三看</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>检索命中（该找的片段进 top-k 了吗）、生成忠实（有没有歪曲资料）、拒答得当（库外问题是否老实）。</p>
+                  <p>命中差先别怪 Chat；生成胡编先查约束与温度。和 RAG 知识图谱主线对齐，用题集回归切分/top-k/重排改动。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">03.4</span>
+                <span class="sub-title">生成参数怎么纳入评测</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>温度、top_p、max_tokens、stop 会影响稳与飘。结构化/工具场景用低温跑基线；对比实验时参数写进版本说明，避免「同模型不同参」吵成一团。</p>
+                  <p>截断导致的失败要和「模型能力失败」分开统计。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">03.5</span>
+                <span class="sub-title">成本 · 延迟 · 路由</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>每题记 token、耗时、是否触发限流。路由策略（简单→小模型，复杂→大模型）必须用题集验收：省钱同时质量不能塌过底线。</p>
+                  <p>缓存命中要带权限键；评测里可加「越权是否命中他人缓存」这类安全相关题。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">03.6</span>
+                <span class="sub-title">回归 · 版本 · 报告</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>模型升级、提示词改版、知识库更新后，重跑冻结题集。报告最少包含：版本信息、三张核心表（命中/忠实/拒答或工具正确率）、失败样例、下一步建议。</p>
+                  <p>目标是让测试同学能主持一次「小而真」的评测，而不是只听厂商跑分。</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mod" id="auto" data-mod="auto">
+          <div class="mod-rail">
+            <span class="mod-num">04</span>
+            <span class="mod-tag">AUTO</span>
+          </div>
+          <div class="mod-body">
+            <button type="button" class="mod-head" data-mod-toggle aria-expanded="false">
+              <h3>功能 · 接口 · 性能</h3>
+              <span class="mod-toggle">展开</span>
+            </button>
+            <div class="subs">
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">04.1</span>
+                <span class="sub-title">AI 辅助编写测试用例</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>从需求/原型/接口文档生成功能用例骨架：前置、步骤、期望、优先级；补边界、异常、权限组合。人审后入库，禁止未审直接进回归池。</p>
+                  <p>学会给模型喂「可测输入」：验收标准、字段约束、历史缺陷标签，而不是只丢一句「帮我测登录」。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">04.2</span>
+                <span class="sub-title">功能测试设计要点</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>主流程、交替路径、打断恢复、空态/满态、权限矩阵。AI 可提候选，断言与业务规则仍由测试定义。</p>
+                  <p>和自动化衔接：哪些适合手工探索，哪些应沉淀成可重复脚本——在设计阶段就标出来。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">04.3</span>
+                <span class="sub-title">Playwright UI 自动化</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>用 Playwright 做稳定选择器、等待策略、多浏览器、录制改写、Page Object / fixtures。AI 可辅助生成定位与样例脚本，你负责稳定性与断言。</p>
+                  <p>重点踩坑：脆弱 CSS、睡眠等待、环境数据耦合。CI 里无头跑、失败截图/录像进报告。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">04.4</span>
+                <span class="sub-title">Midscene.js 智能 UI</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>用自然语言/视觉理解驱动页面操作与断言，适合快速搭冒烟、探索式路径；和 Playwright 互补而非互斥。</p>
+                  <p>学边界：何时用语义步骤加速编写，何时退回确定性选择器保回归稳定；关注模型误点、环境差异与成本。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">04.5</span>
+                <span class="sub-title">接口自动化与契约</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>覆盖：状态码、字段schema、业务码、幂等、鉴权、分页、错误体。可用 AI 从 OpenAPI 草拟用例与断言草稿。</p>
+                  <p>造数、清理、环境隔离；契约测试防止前后端各改各的。工具可按团队栈选（pytest/requests、Rest Assured、Postman/Newman 等）。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">04.6</span>
+                <span class="sub-title">Locust 性能自动化</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>用 Locust 写用户行为、设定并发与升温、观察 RPS/延迟/错误率；区分基准、负载、压力、稳定性。AI 可帮写任务脚本骨架，场景与门槛你定。</p>
+                  <p>要会读瓶颈：应用、DB、网关、限流。性能结论必须带环境规格与数据量，禁止空口「挺快」。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">04.7</span>
+                <span class="sub-title">数据工厂与环境治理</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>可重复造数、账号池、种子数据、测试后清理。AI 辅助生成造数脚本，但要防污染共用环境。</p>
+                  <p>功能/接口/性能三条线共用一套环境约定：配置、开关、脱敏、回滚——否则自动化越强越乱。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">04.8</span>
+                <span class="sub-title">报告 · CI · 质量门禁</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>UI/接口/性能结果进统一报告；PR 或夜间流水线设门禁（冒烟必过、性能不劣于基线）。失败分级：环境问题 vs 产品回归。</p>
+                  <p>AI 可做失败归类与摘要，最终是否拦截发布仍由质量规则与人确认。</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mod" id="interview" data-mod="interview">
+          <div class="mod-rail">
+            <span class="mod-num">05</span>
+            <span class="mod-tag">MOCK</span>
+          </div>
+          <div class="mod-body">
+            <button type="button" class="mod-head" data-mod-toggle aria-expanded="false">
+              <h3>模拟面试</h3>
+              <span class="mod-toggle">展开</span>
+            </button>
+            <div class="subs">
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">05.1</span>
+                <span class="sub-title">测试基础高频题</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>用例设计、等价类/边界、缺陷生命周期、冒烟/回归差异、优先级与严重级别。练「先结论后展开」的答题结构。</p>
+                  <p>用 AI 当对面：随机抽题、追问细节、指出空洞表述；你再对照标准答法改一版。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">05.2</span>
+                <span class="sub-title">AI / Agent / RAG 场景题</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>怎么测幻觉与拒答、Agent 工具选错怎么发现、RAG 检索没命中先查哪、温度对稳定性的影响——把前面模块收成面试话术。</p>
+                  <p>准备 1～2 个你亲手做过的小实验当故事：题集、指标、改了一处后分数怎么变。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">05.3</span>
+                <span class="sub-title">自动化与性能题</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>Playwright 稳定性、Midscene 适用边界、接口契约、Locust 指标含义、何时该做性能测试。强调「目标与门槛」比「会跑工具」更重要。</p>
+                  <p>模拟被追问：失败是环境还是产品？CI 门禁怎么设才不误伤？</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">05.4</span>
+                <span class="sub-title">项目深挖与行为面</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>用 STAR 讲清：背景、你的动作、数据结果、复盘。AI 帮你压成 90 秒版本，再练被追问「如果重来会改什么」。</p>
+                  <p>覆盖协作冲突、质量与进度取舍、线上事故复盘口吻——具体、可验证，少空话。</p>
+                </div>
+              </button>
+              <button type="button" class="sub" data-open>
+                <span class="sub-id">05.5</span>
+                <span class="sub-title">AI 对练与复盘清单</span>
+                <span class="sub-hint">展开</span>
+                <div class="sub-panel">
+                  <p>设定面试官角色（初/中级测试、AI 测试方向），限时作答；结束后让 AI 按：完整性、结构化、术语准确性、举例力度打分并给改写。</p>
+                  <p>自建错题本：弱项题反复抽；每周固定一场全流程模拟（自我介绍→技术→项目→反问）。</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <span>AI TEST · INTRO</span>
+      <a href="/">返回首页</a>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
